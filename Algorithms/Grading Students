@@ -1,0 +1,13 @@
+def gradeStudent(mark):
+    if(mark<38 or mark%5==0):
+        return mark
+    nextMultiple=mark+(5-mark%5)
+    if(nextMultiple-mark<3):
+      return nextMultiple
+    return mark
+     
+
+n=int(input())
+for i in range(n):
+    mark=int(input())
+    print(gradeStudent(mark))
