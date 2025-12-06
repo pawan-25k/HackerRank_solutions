@@ -1,0 +1,11 @@
+
+int diagonalDifference(int arr_rows, int arr_columns, int** arr) {
+    int LTR,RTL;
+    for(int i=0;i<arr_rows;i++){
+         LTR+=arr[i][i];
+        
+         RTL+=arr[i][arr_rows-1-i];
+        }
+    int diff=abs(LTR-RTL);
+    return diff;
+}
